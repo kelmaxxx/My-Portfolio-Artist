@@ -1,0 +1,46 @@
+html, body { margin: 0; padding: 0; min-height: 100vh; }
+body { font-family: "Geist", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+
+/* ─── Responsive layout overrides ───
+   Inline styles set the desktop defaults; these classes override
+   grid-template-columns and similar at narrower viewports. */
+
+/* ≤ 1024px — tablet / small laptop */
+@media (max-width: 1024px) {
+  .k-archive-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .k-tier-row { grid-template-columns: repeat(2, 1fr) !important; }
+  .k-commission-top { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .k-terms-row { grid-template-columns: 1fr !important; gap: 32px !important; }
+}
+
+/* ≤ 720px — phone */
+@media (max-width: 720px) {
+  .k-header { padding: 18px 20px !important; flex-wrap: wrap; gap: 14px; }
+  .k-nav { display: none !important; }
+  .k-status-text { display: none !important; }
+  .k-section-pad { padding-left: 20px !important; padding-right: 20px !important; }
+  .k-hero { min-height: 620px !important; }
+  .k-hero-caption { left: 20px !important; right: 20px !important; bottom: 40px !important; max-width: none !important; }
+  .k-hero-meta { right: 20px !important; left: 20px !important; top: 24px !important; text-align: left !important; }
+  .k-hero-scroll { display: none !important; }
+  .k-archive-grid { grid-template-columns: 1fr !important; grid-auto-rows: 220px !important; }
+  .k-archive-grid > * { grid-row: span 1 !important; grid-column: 1 / -1 !important; }
+  .k-archive-header { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; }
+  .k-commission-card { padding: 32px 20px !important; border-radius: 16px !important; }
+  .k-tier-row { grid-template-columns: 1fr !important; }
+  .k-expand-grid { grid-template-columns: 1fr !important; }
+  .k-expand-image { min-height: 260px !important; }
+  .k-terms-list { grid-template-columns: 1fr !important; }
+  .k-cta-row { flex-direction: column !important; align-items: stretch !important; }
+  .k-cta-row > button { width: 100% !important; }
+  .k-footer-cols { grid-template-columns: repeat(2, 1fr) !important; }
+  .k-footer-bottom { flex-direction: column !important; gap: 8px !important; text-align: center; }
+}
+
+/* Reduce-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

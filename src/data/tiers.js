@@ -1,0 +1,60 @@
+// Commission tiers — single source of truth used by both the
+// card row and the expanded sample panel.
+
+export const tiers = [
+  {
+    num: '01',
+    name: 'Headshot',
+    price: '350',
+    desc: 'Face & shoulders. Clean rendering on a soft background.',
+    hot: false,
+    sample: '/assets/kelma-03-portrait',
+    sampleBg: 'center 20%',
+    sampleSize: 'cover',
+    long: 'A tight, expressive portrait — just the face and a hint of shoulders. Best for profile pictures, character icons, gifts. Soft rendered lighting, simple wash background.',
+    includes: [
+      'Single subject',
+      'Soft-wash background',
+      'Flat or rendered shading',
+      '1 revision after sketch',
+    ],
+    tat: '3–5 days',
+  },
+  {
+    num: '02',
+    name: 'Bust Up',
+    price: '450',
+    desc: 'Chest-up framing. Slightly more room for hands, props, expression.',
+    hot: true,
+    sample: '/assets/kelma-01',
+    sampleBg: 'center 22%',
+    sampleSize: '160%',
+    long: 'Chest-up — room for a prop, a hand near the face, costume detail at the collar. The size most people pick when they want their portrait to feel like an actual portrait.',
+    includes: [
+      'Single subject',
+      'Hand / prop visible',
+      'Costume up to collar',
+      '1 revision after sketch',
+    ],
+    tat: '5–8 days',
+  },
+  {
+    num: '03',
+    name: 'Halfbody',
+    price: '600',
+    desc: 'Waist-up. Full pose, costume detail, simple background.',
+    hot: false,
+    sample: '/assets/kelma-01',
+    sampleBg: 'center 50%',
+    sampleSize: 'cover',
+    long: 'Waist-up — the full upper body, a real pose, full costume rendering. Best for OCs, character refs, full outfit illustrations. Simple background included.',
+    includes: [
+      'Single subject',
+      'Full upper-body pose',
+      'Full costume rendering',
+      'Simple background',
+      '2 revision rounds',
+    ],
+    tat: '8–12 days',
+  },
+];
